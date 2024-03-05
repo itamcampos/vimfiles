@@ -1,5 +1,6 @@
 set nocompatible
 set exrc
+filetype off
 
 call plug#begin('~/.vim/plugged')
 
@@ -43,3 +44,69 @@ filetype plugin on
 	map <F6> <Esc>:EnablePHPFolds<Cr>
 	map <F7> <Esc>:DisablePHPFolds<Cr>
 
+" Automatically detect file types.
+filetype plugin indent on
+
+syntax on
+
+" Case insentive command autocomplete
+augroup dynamic_smartcase
+  autocmd!
+  autocmd CmdLineEnter : set nosmartcase
+  autocmd CmdLineLeave : set smartcase
+augroup END
+
+if has('gui_running')
+  set ts=2 sw=2 et
+  set guioptions=egmrt
+  set guifont=Menlo:h12
+endif
+
+" Always show the signcolumn, so our buffers doesn't shift on errors
+autocmd BufRead,BufNewFile * setlocal signcolumn=yes
+autocmd FileType nerdtree setlocal signcolumn=no
+
+" UI
+set ruler          " Ruler on
+set nu             " Line numbers on
+set nowrap         " Line wrapping off
+set laststatus=2   " Always show the statusline
+set cmdheight=2    " Make the command area two lines high
+set encoding=utf-8
+set background=dark
+set updatetime=100
+
+" Visual
+set showmatch   " Show matching brackets.
+set matchtime=2 " How many tenths of a second to blink
+set list " Show invisible characters
+" Don't give |ins-completion-menu| messages
+set shortmess+=c
+
+" Behaviors
+set autoread           " Automatically reload changes if detected
+set wildmenu           " Turn on WiLd menu
+set hidden             " Change buffer - without saving
+set history=768        " Number of things to remember in history.
+set cf                 " Enable error files & error jumping.
+set autowrite          " Writes on make/shell commands
+set timeoutlen=350     " Time to wait for a command (after leader for example)
+set foldlevelstart=99  " Remove folds
+set formatoptions=crql
+set iskeyword+=$,@     " Add extra characters that are valid parts of variables
+set completeopt-=preview "Disables preview
+
+" Text Format
+set tabstop=2
+set backspace=2  " Delete everything with backspace
+set shiftwidth=2 " Tabs under smart indent
+set cindent
+set autoindent
+set smarttab
+set expandtab
+
+" Searching
+set ignorecase " Case insensitive search
+set smartcase  " Non-case sensitive search
+set incsearch
+set hlsearch
