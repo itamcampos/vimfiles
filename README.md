@@ -26,7 +26,7 @@ Then:
   echo "source ~/.vim/vimrc" >> ~/.vimrc
 ```
 
-Run Vim and type
+Run Vim and type:
 
 ```bash
   :PlugInstall
