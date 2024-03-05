@@ -2,6 +2,8 @@
 
 Files are constantly updating to experience new features, so make sure there are no conflicts with your current settings.
 
+The currently active theme is "Tokyo Night" provided by user [ghifarit53](https://github.com/ghifarit53/tokyonight-vim).
+
 If you are starting your personal settings of Vim, it would be important to read the content below first:
 
 ## In English:
