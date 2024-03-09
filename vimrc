@@ -18,7 +18,7 @@ call plug#end()
 
 set termguicolors
 
-" T O K Y O  N I G H T
+" Tokyo Night Theme
 let g:tokyonight_style = 'night' " Available values: night, storm
 let g:tokyonight_enable_italic = 1
 let g:tokyonight_transparent_background = 0 " Available values: 0 (default), 1
@@ -27,9 +27,8 @@ let g:tokyonight_cursor = 'auto' " Available values: 'auto', 'red', 'green', 'bl
 let g:tokyonight_current_word = 'grey background' " Some plugins can highlight the word under current cursor(for example neoclide/coc-highlight), you can use this option to control their behavior. Available values: 'bold', 'underline', 'italic', 'grey background'
 
 " Lightline & Airline
-""
-""This theme also has support for lightline as well as airline.
-""To enable lightline support:
+"" This theme also has support for lightline as well as airline.
+" To enable lightline support:
 let g:lightline = {'colorscheme' : 'tokyonight'}
 
 " To enable airline support:
